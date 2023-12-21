@@ -18,14 +18,14 @@ const getData = () => {
       try {
         if (yearInput === "") {
           const response = await fetch(
-            `http://omdbapi.com?apikey=7071dd1&s=${search}`
+            `https://omdbapi.com?apikey=7071dd1&s=${search}`
           );
           const data = await response.json();
           loading = false;
           cb(data);
         } else {
           const response = await fetch(
-            `http://omdbapi.com?apikey=7071dd1&s=${search}&y=${yearInput}`
+            `https://omdbapi.com?apikey=7071dd1&s=${search}&y=${yearInput}`
           );
           const data = await response.json();
           loading = false;
