@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Carousel</title>
+  </head>
+  <body>
+    <h1 class="title">pencarian movies sederhana</h1>
+    <div class="carousel-container">
+      <div class="search">
+        <input type="text" placeholder="cari film" id="search" />
+        <input
+          type="number"
+          name="yearInput"
+          id="yearInput"
+          pattern="\d{4}"
+          min="1990"
+          placeholder="waktu"
+          max="2100"
+          id=""
+        />
+        <button id="submit">kirim</button>
+      </div>
+      <div></div>
+      <div id="carousel-wrapper"></div>
+      <div id="overlay" onclick="on()"></div>
+    </div>
+
+    <!-- <script src="animation.js"></script> -->
+    <script src="service.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+:root {
+  --font-primary: "Ubuntu", sans-serif;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.title{
+    text-align: center;
+}
+.carousel-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.carousel-container .search{
+    display: grid;
+    width: 40%;
+    grid-template-columns: 50% 20% 25%;
+    column-gap: 3px;
+    margin: 1rem 0 0.4rem 0;
+}
+.carousel-container .search input{
+    height: 1.4rem;
+    padding: 0.3rem;
+}
+.carousel-container .search input::placeholder{
+    letter-spacing: 0.2rem;
+}
+#carousel-wrapper {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-around;
+  column-gap: 4px;
+  row-gap: 10px;
+}
+.item {
+  border: 1px solid black;
+}
+.item .title {
+  text-align: center;
+  font-family: var(--font-primary);
+}
+
+
+.item .content img {
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60%;
+}
+.item .content p:nth-child(2) , .item .content p:nth-child(3){
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-primary);
+}
+
+#overlay {
+  position: fixed;
+  display: none; 
+  width: 100%; 
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 200; 
+
+  justify-content: center;
+}
+
+#overlay .container{
+  width:70%;
+  min-height: 90vh;
+  overflow-y: auto;
+  font-family: var(--font-primary);
+  border-radius: 2px;
+  margin-top: 20px;
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+#overlay .container h1{
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#overlay .container .content{
+  width: 100%;
+  height: 100%;
+}
+
+#overlay .container .content img{
+  height: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+}
+#overlay .container .middle{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  justify-content: center;
+}
+
+@media screen and (max-width:550px){
+  .carousel-container .search{
+    width: 80%;
+  }
+  #carousel-wrapper{
+    grid-template-columns: 48% 48%;
+  }
+  #overlay .container{
+    width: 100%;
+  }
+  #overlay .container .content img{
+    width: 90%;
+    height: 20rem;
+  }
+}
